@@ -1,5 +1,5 @@
 # Discord_clone
-A Discord clone made with Django. You can use it at [Discord clone](https://django-discord-clone.herokuapp.com/).
+A Discord clone made with Django. You can use it at [Discord clone].
 
 ## Getting Started
 
