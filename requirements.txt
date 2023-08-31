@@ -1,0 +1,7 @@
+Django==4.1.1
+djangorestframework==3.13.1
+Pillow==9.2.0
+gunicorn
+psycopg2
+django-heroku  
+whitenoise  

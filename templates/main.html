@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <title>Discord - Find communities around the world!</title>
+    <style>
+      .messages{
+        background-color: #696d97;
+        color: whitesmoke;
+        border-radius: 3px;
+        width: 20%;
+        margin: 20px;
+        list-style: none;
+        padding: 8px;
+      }
+
+      
+      .fade-out {
+        animation: fadeOut ease 7s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    {% include 'navbar.html' %}
+
+
+    {% if messages %}
+    <ul class="messages fade-out" >
+        {% for message in messages %}
+        <li>{{message}} </li>
+        {% endfor %}
+    </ul> 
+    {% endif %}
+
+    
+
+    {% block content %}
+
+    {% endblock %}
+    
+        <script src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>
+
+
